@@ -76,6 +76,7 @@ class BurgerBuilder extends Component {
         this.setState({
           ingredients: response.data
         });
+        this.updatePurchaseState(this.state.ingredients);
       })
       .catch(error => {
         console.log(error);
